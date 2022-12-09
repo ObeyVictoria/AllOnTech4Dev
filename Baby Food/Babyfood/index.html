@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Food</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            width: 50%;
+            height: 70vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .sec1{
+            border: 3px solid black;
+            width: 75%;
+            height: 60vh;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .sec2{
+            border: 3px solid black;
+            width: 15%;
+            height: 60vh;
+            border-radius: 10px;
+        }
+        .sme{
+            width: 30%;
+            border-radius: 7px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+            border: none;
+            
+        }
+        img{
+            max-width: 100%;
+            height: inherit;
+        }
+    </style>
+
+    <main>
+        <section class="sec1" id="rrr">
+            <div class="sme"><img src="./images/baby banana.jpg" alt="Banana"  id="img1"></div>
+            <div class="sme"><img src="./images/NUTRILAC.jpg" alt="Nutrilac" id="img2"></div>
+            <div class="sme"><img src="./images/BEECHNUT.webp" alt="Beechnut" id="img3"></div>
+            <div class="sme"><img src="./images/cerelac.jpg" alt="Cerelac" id="img4"></div>
+            <div class="sme"><img src="./images/baby carrot.png" alt="carrot" id="img5"></div>
+            <div class="sme"><img src="./images/SMA.jpg" alt="SMA" id="img6"></div>
+        </section>
+        <section class="sec2">
+            <div>
+                <h3>PRODUCT NAME:</h3>
+                <div id="result" ></div>
+            </div>
+            <div>
+                <h3>PRICE:</h3>
+                <div id="price"></div>
+            </div>
+        </section>
+
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

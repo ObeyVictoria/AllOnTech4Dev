@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;margin: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* styling header*/
+header{
+    font-weight: 800 !important;
+    text-align: center;
+    background: blue;
+    padding: 3% 0;
+    color: azure;
+    font-size: larger;
+}
+
+/*styling main*/
+main{
+    width: 100%;
+    display: flex;
+}
+
+/*styling section1*/
+.section1{
+    width: 80%;
+    background-color: blue;
+}
+form {
+    margin-left: 10px;
+    margin-top: 45px;
+}
+label{
+    font-weight: 600;
+}
+textarea{
+    padding: 4px;
+    margin-left: 35px;
+    margin: 10px;
+    height: 80px;
+    width: 90%;
+    border: 0;
+    border-radius: 3px;
+}
+textarea:hover {
+	border: 2px solid rgba(0, 0, 0, 0.4);
+}
+input{
+    width: 90%;
+    height: 40px;
+    padding: 4px;
+    margin-left: 35px;
+    margin: 10px;
+    border: 0;
+    border-radius: 3px;
+}
+input:hover {
+	border: 2px solid rgba(0, 0, 0, 0.4);
+}
+::placeholder {
+	color: hsl(249, 10%, 26%);
+    font-size: 14px;
+}
+#button{
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: 700;
+}
+/* styling section2*/
+.wrapper{
+    margin: 7%;
+    background-color: rgb(253, 255, 255);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+
+}
+.header{
+    padding: 3% 0;
+    background-color: rgb(100, 175, 240);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.names{
+flex: 50%;
+padding-left: 40px;
+padding-top: 20px;
+color: white;
+text-transform: uppercase;
+}
+.names >h1{
+font-weight: 2000;
+font-size: 50px
+}
+.addresses{
+    color:white;
+    padding-right: 30px;
+    margin-top: 30px;
+}
+.addresses > .caption{
+    font-weight: bold;
+}
+.content{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+section>h3{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+section>p{
+    font-weight: 100;
+    
+}
+.skill-set{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+}
+.skill-set >div{
+    flex:50%
+}
+.sec{
+    margin-bottom: 50px;
+}
+.ul{
+    padding-left: 50px;
+}
+.footer{
+    margin: 0px;
+    height: 20px;
+    background-color: rgb(100, 175, 240);
+    bottom: 0;
+}
+#none{
+    list-style: none;
+}
+ul>li{
+    margin-bottom: 10px;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    background-color: blue;
+    padding: 1%;
+    color: azure;
+    font-weight: 400;
+    font-size: 17px;
+    border-radius: 20px;
+    border: 0;
+}
+/*styling footer*/
+
+footer{
+    background-color: blue;
+    font-weight: 600;
+    text-align: center;
+    padding: 1% 0;
+    color: black;
+    font-size: 20px;
+}
