@@ -1,0 +1,2 @@
+This folder contains a class on connecting to mySQLdatabase using sequelize, 
+the dependencies that needs to be installed are on the requirement.txt file.

@@ -29,20 +29,38 @@ const register = async(req, res) =>{
             })
         }
        
-
-     
     
     }).catch(err=>{
           console.log(e)
       });
 }
-module.exports = {register}
 
+const login = async(req,res)=>{
+    
+    const  username = req.body.username
+    const  password = req.body.password
+      Customer.findOne({
+          where: {
+              username: username
+          }
+        }).then(rs =>{
+       if(rs)
+       {
+          const validity  =  bcrypt.compareSync(password,rs.dataValues.password)
+          if(validity == true){
+              const token = jwt.sign(rs.dataValues,secret)
+              res.status(200).json([{ message: token}])
+          }else{
+              res.status(200).json([{ message: "invalid" }]) 
+          }
+       }else{
+          res.status(200).json([{ message: "invalid" }]) 
+       }
+  
+      }).catch(err=>{
+            console.log(err)
+        });
+    }
 
-/*Customer.create(cus).then(rs=>{
-        console.log(rs)
-        res.status(200).json([{message:"data created"}])
-    }).catch(err=>{
-        console.log(err)
-        res.status(403).json([{message:"err"}])
-    })*/
+    
+module.exports = {register,login}

@@ -32,13 +32,17 @@ app.set('view engine','ejs')
 
 
 
-app.get('/',(req,res)=>{ 
+app.get('/dashboard',(req,res)=>{ 
  
 res.render("index",{users: users,transactions: transactions});
 })
 
-app.get('/login',(req,res)=>{ 
+app.get('/',(req,res)=>{ 
     res.render("login");
+})
+
+app.get('/register',(req,res)=>{ 
+    res.render("register");
 })
 
 app.listen(port,()=>{
