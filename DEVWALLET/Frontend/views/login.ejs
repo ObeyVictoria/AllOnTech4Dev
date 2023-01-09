@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../../images/favicon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -37,7 +39,7 @@
               <h6 class="fw-light">Sign in to continue.</h6>
               <form class="pt-3" id="formlogin">
                 <div class="form-group">
-                  <input type="email" id="username" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" required>
+                  <input type="text" id="username" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" required>
                 </div>
                 <div class="form-group">
                   <input type="password" id="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" required>
@@ -102,6 +104,7 @@
     })
     }else{
       console.log(res.data[0].message)
+      localStorage.setItem("token",res.data[0].message)
       window.location = '/dashboard'
        
     }

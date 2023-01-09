@@ -1,7 +1,11 @@
 const sequelize = require("../config/connections.js")
 const { Customer } = require("../models/customer.js")
+const { deposit } = require("../models/savings.js")
+const { withdrawal } = require("../models/withdrawal.js")
+const jwt = require("jsonwebtoken")
 const bcrypt = require('bcryptjs')
 const saltRounds = bcrypt.genSaltSync(10)
+const secret = "secret"
 
 const register = async(req, res) =>{
     const cus = {cusName: req.body.CustomerName,
@@ -62,5 +66,32 @@ const login = async(req,res)=>{
         });
     }
 
+
+    const dashboard =async (req,res)=>{
+        let total = 0
+        let totalwith = 0
+           const customerID = req.decoded.custid
+        const result = await deposit.findAll({
+               where: {
+                   custid: customerID
+               }
+           })
+       result.map((r)=>{
+             total = total +  r.dataValues.Amountdep
+            })
+           withdrawal.findAll({
+                   where: {
+                       custid: customerID
+                   }
+               }).then(rsw =>{
+                  rsw.map((rw)=>{
+                    return   totalwith = totalwith + rw.dataValues.Amountwithdraw
+                   })
+                   res.status(200).json([{customer:customerID,fullname:req.decoded.cusName,savings:total,withdraw:totalwith,balance:total - totalwith}])
+       
+                   }).catch(err=>{
+       console.log(err)
+               })
+           }
     
-module.exports = {register,login}
+module.exports = {register,login,dashboard}
