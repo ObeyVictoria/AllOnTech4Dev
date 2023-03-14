@@ -1,0 +1,3 @@
+Searching for car with name,color and make.
+run node index.js in the terminal and use the localhost to access the page on the browser, 
+then type the color or name or type of car that is on the db.js to show cars available with such property.

@@ -1,5 +1,7 @@
-/*{document.getElementById("firstname").innerHTML = "VICTORIA";
+document.getElementById("firstname").innerHTML = "VICTORIA";
 document.getElementById("lastname").innerHTML = "AYOMIDE";
+
+
 let myVar = "Tolu"
 let ourVar = "Tayo"
 const twoVar = myVar += ourVar
@@ -11,4 +13,4 @@ console.log(fola)
 console.log(tolu)
 console.log(tolu++)
 console.log(tolu)
-console.log(++tolu)*/
+console.log(++tolu)
